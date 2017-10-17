@@ -12,15 +12,26 @@ my $result;
 my $presep;
 
 
+$relem = &me::set::zro();
+&me::set::sylb($relem);
+
 sub opto__do__sylb {
   $sylnum = &argola::getrg();
 } &argola::setopt('-sylb',\&opto__do__sylb);
 
+sub opto__do__num {
+  my @lc_a;
+  @lc_a = ('0','1','2','3','4','5','6','7','8','9');
+  @lc_a = (@lc_a,@lc_a);
+  @lc_a = (@lc_a,@lc_a);
+  @lc_a = (@lc_a,@lc_a);
+  @lc_a = (@lc_a,@lc_a);
+  @lc_a = (@lc_a,@lc_a);
+  @$relem = @lc_a;
+} &argola::setopt('-num',\&opto__do__num);
+
 
 &argola::runopts();
-
-$relem = &me::set::zro();
-&me::set::sylb($relem);
 
 
 # Here will *eventually* be option-processing:
