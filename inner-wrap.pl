@@ -30,6 +30,28 @@ sub opto__do__num {
   @$relem = @lc_a;
 } &argola::setopt('-num',\&opto__do__num);
 
+sub opto__do__ful {
+  my @lc_a;
+  my @lc_b;
+
+  @lc_a = ('a','b','c','d','e','f','g','h','i','j','k','m','n','o','p','q','r', 's','t','u','v','w','x',y','z');
+  @lc_b = (@lc_b,  @lc_a);
+
+  @lc_a = ('A','B','C','D','E','F','G','H','J','K','L','M','N','P', 'Q','R','T','U','V','W','X','Y','Z');
+  @lc_b = (@lc_b,  @lc_a);
+
+  @lc_a = ('2','3','4','5','6','7','8','9');
+  @lc_b = (@lc_b,  @lc_a);
+  @lc_b = (@lc_b,  @lc_a);
+
+  @lc_a = ('$','@','!','%','^');
+  @lc_b = (@lc_b,  @lc_a);
+  @lc_b = (@lc_b,  @lc_a);
+  @lc_b = (@lc_b,  @lc_a);
+
+  @$relem = @lc_b;
+} &argola::setopt('-ful',\&opto__do__ful);
+
 
 &argola::runopts();
 
